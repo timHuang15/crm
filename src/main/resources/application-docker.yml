@@ -1,0 +1,35 @@
+logging:
+  file: /var/log/oss/oss.log
+  level.*: INFO
+  level.com.tocean: DEBUG
+
+server:
+  context-path: /
+  port: 8080
+  jetty:
+    selectors: -1
+    acceptors: -1
+
+spring:
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  application:
+    name: tocean-oss
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+file:
+  path: ${FILE_PATH}/
+  cache: ${FILE_PATH}/cache/

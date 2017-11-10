@@ -1,0 +1,37 @@
+spring.profiles.active: dev
+
+logging:
+  file: ${user.home}/93logs/galaxy/wx.log
+  level.*: INFO
+  level.com.tocean: DEBUG
+
+server:
+  context-path: /
+  port: 8099
+  jetty:
+    selectors: -1
+    acceptors: -1
+
+spring:
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  application:
+    name: tocean-oss
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/oss?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: admin
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+file:
+  path: /Users/alan/99temp/oss/
+  cache: /Users/alan/99temp/oss/cache/
