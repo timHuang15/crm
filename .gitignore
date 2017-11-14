@@ -54,7 +54,7 @@ flyway.properties
 _book/
 **/rebel.xml
 null/
-application.yml
+!application.yml
 !application-*.yml
 application.properties
 application-*.properties
