@@ -28,5 +28,16 @@ public class StudentViolation extends BaseEntity {
     private String classNum;
     @Column(name="violation_situation")
     private String violationSituation;
+
+    /*获取学生姓名*/
+    private String studentName;
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
 }
 

@@ -30,9 +30,7 @@ public class StudentPraise extends BaseEntity {
     @Column(name="score")
     private double score;
 
-   /* @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "student_id")
-    private StudentInfo studentInfo;*/
+   /* 获取学生姓名*/
 
    private String studentName;
 
