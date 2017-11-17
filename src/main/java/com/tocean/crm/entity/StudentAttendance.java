@@ -26,4 +26,16 @@ public class StudentAttendance extends BaseEntity {
 
     @Column(name = "status")
     private String status;
+
+    /* 获取学生姓名*/
+
+    private String studentName;
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
 }
