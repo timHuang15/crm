@@ -6,7 +6,6 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
 import java.util.Date;
 
 /**
@@ -30,4 +29,20 @@ public class StudentPraise extends BaseEntity {
 
     @Column(name="score")
     private double score;
+
+   /* @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "student_id")
+    private StudentInfo studentInfo;*/
+
+   private String studentName;
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+
 }
